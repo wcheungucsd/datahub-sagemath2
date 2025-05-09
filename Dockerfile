@@ -4,7 +4,7 @@
 # base notebook, contains Jupyter and relevant tools
 # See https://github.com/ucsd-ets/datahub-docker-stack/wiki/Stable-Tag 
 # for a list of the most current containers we maintain
-ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:stable
+#ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:stable
 ARG BASE_CONTAINER=sagemath/sagemath:latest
 
 
@@ -19,8 +19,8 @@ USER root
 
 RUN apt-get -y clean && apt-get -y update
 
-USER sage
-RUN sage -i jupyterlab jupyterlab_widgets retrolab
+#USER sage
+#RUN sage -i jupyterlab jupyterlab_widgets retrolab
 
 USER root
 RUN chmod -R 0755 /home/sage
