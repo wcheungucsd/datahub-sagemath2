@@ -18,6 +18,14 @@ LABEL maintainer="wcheung@ucsd.edu"
 USER root
 
 RUN apt-get -y clean && apt-get -y update
+
+USER sage
+RUN sage -i jupyterlab jupyterlab_widgets retrolab
+
+USER root
+RUN chmod -R 0755 /home/sage
+
+
 #RUN apt-get -y install htop
 
 # 3) install packages using notebook user
