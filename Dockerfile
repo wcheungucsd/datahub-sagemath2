@@ -19,6 +19,9 @@ USER root
 
 RUN apt-get -y clean && apt-get -y update
 
+RUN apt-get -y install make
+
+
 #USER sage
 #RUN sage -i jupyterlab jupyterlab_widgets retrolab
 
