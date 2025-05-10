@@ -4,11 +4,19 @@
 
 #exec sage -n jupyter --no-browser "$@"
 
-if [ x"$1" = x"sage-jupyter" ]; then
-    # If "sage-jupyter" is given as a first argument, we start a jupyter notebook
-    # with reasonable default parameters for running it inside a container.
-    shift
-    exec sage -n jupyter --no-browser --ip='0.0.0.0' --port=8888 "$@"
-else
-    exec sage -sh -c "$*"
-fi
+#if [ x"$1" = x"sage-jupyter" ]; then
+#    # If "sage-jupyter" is given as a first argument, we start a jupyter notebook
+#    # with reasonable default parameters for running it inside a container.
+#    shift
+#    exec sage -n jupyter --no-browser --ip='0.0.0.0' --port=8888 "$@"
+#else
+#    exec sage -sh -c "$*"
+#fi
+
+
+export PATH="/home/sage/sage:${PATH}"
+#export PATH="/home/sage/sage:/home/sage/src/bin:${PATH}"
+#export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
+
+
+exec sage -n jupyterlab --no-browser --ip='0.0.0.0' "$@"
