@@ -29,7 +29,7 @@ USER root
 RUN chmod -R 0755 /home/sage
 
 
-COPY --chown=root:bin artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
+COPY --chown=root:bin --chmod=755 artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
 
 
 #RUN apt-get -y install htop
