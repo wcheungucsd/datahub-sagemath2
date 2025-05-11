@@ -14,9 +14,10 @@
 #fi
 
 
-export PATH="/home/sage/sage:${PATH}"
+#export PATH="/home/sage/sage:${PATH}"
 #export PATH="/home/sage/sage:/home/sage/src/bin:${PATH}"
 #export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
+export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
 
 
-exec sage -n jupyterlab --no-browser --ip='0.0.0.0' "$@"
+exec sage -n jupyterlab --no-browser --ip='0.0.0.0' --port=8888 "$@"
