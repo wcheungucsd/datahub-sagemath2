@@ -15,11 +15,11 @@ LABEL maintainer="wcheung@ucsd.edu"
 
 
 # 2) change to root to install packages
-USER root
+#USER root
 
-RUN apt-get -y clean && apt-get -y update
+#RUN apt-get -y clean && apt-get -y update
 
-RUN apt-get -y install make
+#RUN apt-get -y install make
 
 
 #USER sage
@@ -29,7 +29,7 @@ USER root
 RUN chmod -R 0755 /home/sage
 
 
-COPY --chown=root:bin --chmod=755 artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
+COPY --chown=root:root --chmod=755 artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
 
 
 #RUN apt-get -y install htop
