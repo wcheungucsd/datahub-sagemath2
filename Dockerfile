@@ -32,10 +32,10 @@ RUN chmod -R 0755 /home/sage
 COPY --chown=root:root --chmod=755 artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
 
 
-USER sage
+#USER sage
 
 #ENTRYPOINT ["/usr/local/bin/start-notebook.sh"]
-CMD ["/usr/local/bin/sage-entrypoint"]
+#CMD ["/usr/local/bin/sage-entrypoint"]
 
 
 
