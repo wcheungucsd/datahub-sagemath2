@@ -20,10 +20,10 @@
 export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
 
 
-RUN echo "PATH = $PATH"
-RUN export PATH="/home/sage/sage/local/var/lib/sage/venv-python3.12.5/bin:/home/sage/sage/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH}" && echo "PATH = $PATH"
-RUN echo "PATH = $PATH"
-RUN echo "USER = $USER"
+echo "PATH = $PATH"
+export PATH="/home/sage/sage/local/var/lib/sage/venv-python3.12.5/bin:/home/sage/sage/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH}"
+echo "PATH = $PATH"
+echo "USER = $USER"
 
 
 exec sage -n jupyterlab --no-browser --ip='0.0.0.0' --port=8888 "$@"
