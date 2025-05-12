@@ -34,6 +34,8 @@ COPY --chown=root:root --chmod=755 artifacts/start-notebook.sh /usr/local/bin/st
 
 USER sage
 
+ENTRYPOINT["/usr/local/bin/start-notebook.sh"]
+
 
 #RUN apt-get -y install htop
 
