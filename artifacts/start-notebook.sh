@@ -25,5 +25,13 @@ export PATH="/home/sage/sage/local/var/lib/sage/venv-python3.12.5/bin:/home/sage
 echo "PATH = $PATH"
 echo "USER = $USER"
 
+echo "BEGIN sage -n jupyterlab"
+sleep 1
 
 exec sage -n jupyterlab --no-browser --ip='0.0.0.0' --port=8888 "$@"
+
+echo "END sage -n jupyterlab"
+
+sleep 10
+
+exit 0
