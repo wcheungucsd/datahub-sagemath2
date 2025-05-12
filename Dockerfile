@@ -32,6 +32,9 @@ RUN chmod -R 0755 /home/sage
 COPY --chown=root:root --chmod=755 artifacts/start-notebook.sh /usr/local/bin/start-notebook.sh
 
 
+USER sage
+
+
 #RUN apt-get -y install htop
 
 # 3) install packages using notebook user
