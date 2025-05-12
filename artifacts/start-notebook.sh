@@ -16,8 +16,8 @@
 
 #export PATH="/home/sage/sage:${PATH}"
 #export PATH="/home/sage/sage:/home/sage/src/bin:${PATH}"
-#export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
-export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
+#export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:/home/sage/sage/local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
+#export PATH="/home/sage/sage:/home/sage/src/bin:/home/sage/local/bin:/home/sage/build/bin:/home/sage/local/lib/gap/bin:/home/sage/sage/local/var/lib/sage/venv-python3.12.5/bin:${PATH}"
 
 
 echo "PATH = $PATH"
