@@ -28,7 +28,9 @@ echo "USER = $USER"
 echo "BEGIN sage -n jupyterlab"
 sleep 1
 
-exec sage -n jupyterlab --no-browser --ip='0.0.0.0' --port=8888 "$@"
+#exec sage -n jupyterlab --no-browser --ip='0.0.0.0' --port=8888 "$@"
+exec sage -n jupyterlab --no-browser "$@"
+
 
 echo "END sage -n jupyterlab"
 
